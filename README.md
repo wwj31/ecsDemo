@@ -9,3 +9,6 @@
 - 一个地图代表一个actor,实体会在地图之间进行无缝切换
 - 实体在两区域边界，会产生副本，利用副本的移动、战斗行为和主体一致
 # <img align="right" src="https://github.com/wwj31/ecsDemo/raw/master/assets/demo.jpg" alt="map Demo" title="map Demo" />
+
+
+author: 229482191@qq.com
