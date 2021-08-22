@@ -1,0 +1,248 @@
+syntax = "proto3";
+package inner_message;
+option  go_package = "/inner";
+
+message Error
+{
+}
+
+message GateMsgWrapper
+{
+    string GateSession = 1;
+    string MsgName     = 2;
+    bytes  Data        = 3;
+}
+
+// 存储信息
+message G2DModelSave
+{
+    bytes  Data      = 1;
+    string ModelName = 2;
+    int64  RID       = 3;
+}
+
+// login 请求所有角色数据
+message L2DAllUserReq
+{
+}
+
+message D2LAllUserRes
+{
+    bytes Data = 1; // models.GameUser
+}
+
+// login 请求回存新玩家
+message L2DUserSave
+{
+    bytes Data = 1; // models.GameUser
+}
+
+// game请求role数据
+message G2DRoleReq
+{
+    int64 CallbackId = 1; // 回调Id
+    int64 RID        = 2;
+}
+
+message D2GRoleRes
+{
+    int64              CallbackId = 1; // 回调Id
+    int32              valid      = 2; // 数据是否找到 0.成功 1.未找到角色
+    int64              RID        = 3;
+    map<string, bytes> WholeInfo  = 4; // 角色各个模块的数据
+}
+
+// gatesession断开,gate通知game
+message GT2GSessionClosed
+{
+    string GateSession = 1; // 断开的session
+}
+
+// login通知gate 为session分配gameActor
+message L2GTSessionAssignGame
+{
+    string GateSession = 1; //
+    string GameActorId = 2; // 分配的游戏Actor
+}
+
+// game通知login，玩家离线
+message G2LRoleOffline
+{
+    int64  UID         = 1;
+    int64  RID         = 2;
+    string GateSession = 3; //
+}
+// game通知login，玩家离线
+message G2DGameStop
+{
+}
+
+// login通知game,玩家顶号，旧session失效
+message L2GTUserSessionDisabled
+{
+    string GateSession = 1;
+    int64  UID         = 2;
+}
+
+//////////////////////////////////////////////////// world ///////////////////////////////////////////////////////////
+// game通知world创建新玩家
+message G2WCreateNewPlayer
+{
+    int64  RID         = 1;
+    string GateSession = 2;
+    string EID         = 3;
+    double X           = 4;
+    double Y           = 5;
+}
+
+// game通知world玩家进入世界
+message G2WEnterPlayer
+{
+    int64  RID         = 1;
+    string GateSession = 2;
+    string EID         = 3;
+}
+// game通知world session断开
+message G2WInvaildSession
+{
+    string GateSession = 1;
+}
+
+//////////////////////////////////////////////////// cross area ///////////////////////////////////////////////////////
+// 实体信息
+message EntityInfo
+{
+    string             EId  = 1;
+    map<uint64, bytes> Data = 2;
+    //bytes  AreaComp      = 2; // 区域数据
+    //bytes  MoveComp      = 3; // 移动数据
+    //bytes  PositionComp  = 4; // 位置数据
+    //bytes  AttributeComp = 5; // 属性数据
+    //bytes  FightingComp  = 6; // 战斗数据
+}
+// 通知邻近区域，添加实体
+message W2WAddDuplicate
+{
+    EntityInfo Entity = 1;
+}
+
+// 通知邻近区域，删除实体
+message W2WDelDuplicate
+{
+    string EId = 1;
+}
+
+// 通知邻近区域，更新实体
+message W2WUpdateDuplicate
+{
+    EntityInfo Entity = 1;
+}
+// 通知centerworld 更新实体所在区域
+message W2CenterUpdateEntity
+{
+    string EId    = 1;
+    int32  AreaId = 2; // 区域号
+}
+//world通知center删除
+message W2CenterDeleteEntity
+{
+    string EId = 1;
+}
+//////////////////////////////////////////////////////////////Fight//////////////////////////////////////////////////////
+// 战斗属性
+message FightAttr
+{
+    map<int32, int64> Sets = 1;
+}
+// 发起攻击
+message W2WAttackReq
+{
+    string    AttackerEId  = 1; // 攻击者
+    string    DefenderEId  = 2; // 防御者
+    int32     TurnNumber   = 3; // 攻击者的回合号
+    FightAttr AttackerAttr = 4; // 攻击者本回合属性
+}
+message W2WAttackResp
+{
+    string AttackerEId = 1; // 攻击者
+    string DefenderEId = 2; // 防御者
+    int32  TurnNumber  = 3; // 攻击者的回合计数
+    int64  DamageVal   = 4; // 攻击伤害
+    int64  CounterVal  = 5; // 反击伤害
+}
+
+//////////////////////////////////////////////////////////////UI//////////////////////////////////////////////////////
+message Bound
+{
+    Vec3F  Pos    = 1;
+    double Width  = 2;
+    double Height = 3;
+}
+message Vec3F
+{
+    double X = 1;
+    double Y = 2;
+    double Z = 3;
+}
+
+// 添加新实体
+message U2GAddEntity
+{
+    string EID     = 1;
+    Vec3F  RealPos = 2;
+    int32  areaNum = 3;
+}
+
+// 添加新实体
+message G2UAddEntity
+{
+    string EID       = 1;
+    Vec3F  RealPos   = 2;
+    bool   Duplicate = 3;
+    int32  areaNum   = 4;
+}
+// 删除实体
+message U2GDelEntity
+{
+    string EID     = 1;
+    int32  areaNum = 2;
+}
+// 删除实体
+message G2UDelEntity
+{
+    string EID       = 1;
+    bool   Duplicate = 2;
+    int32  areaId    = 3;
+}
+
+// 实体移动
+message G2UUpdateEntity
+{
+    string EID       = 1;
+    Vec3F  RealPos   = 2;
+    int32  areaId    = 3;
+    int64  Hp        = 4;
+    bool   Duplicate = 5;
+}
+// UI请求实体移动
+message U2GMoveEntity
+{
+    string         EID   = 1;
+    double         Speed = 2;
+    repeated Vec3F Path  = 3;
+}
+// world通知UI地图区域
+message G2UArea
+{
+    int64 WorldId        = 1;
+    Bound ExclusiveBound = 2;
+    Bound ActualBound    = 3;
+    repeated Vec3F Point = 4;
+}
+
+// 通知UI更新当前帧实体数量
+message G2UCountEntity
+{
+    int64 WorldId = 1;
+    int32 Count   = 2;
+}

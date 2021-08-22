@@ -1,0 +1,18 @@
+package constant
+
+const (
+	MAX_WORLD_WIDTH  = 1200 //地图宽度
+	MAX_WORLD_HEIGHT = 1200 //地图高度
+
+	SERVER_SPLIT_AREA  = 3 // 单位格子长度
+	SERVER_AREA_WIDTH  = MAX_WORLD_WIDTH / SERVER_SPLIT_AREA
+	SERVER_AREA_HEIGHT = MAX_WORLD_HEIGHT / SERVER_SPLIT_AREA
+
+	OVERLAP   = 40 // 重叠区域宽
+	GRID_SIZE = OVERLAP
+
+	FRAME_RATE     = 100  // 100毫秒/每帧
+	FIGHTING_FRAME = 1000 // 一回合持续时间 毫秒
+	ATTACK_DIST    = 30   // 攻击距离
+
+)
