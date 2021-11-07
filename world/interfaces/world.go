@@ -7,7 +7,7 @@ import (
 )
 
 type IWorld interface {
-	actor.IActor
+	actor.Actor
 	RegistMsg(msg proto.Message, f RegistFun)
 	AreaId() int32
 	Runtime() *ecs.Runtime
