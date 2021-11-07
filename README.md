@@ -1,7 +1,7 @@
 # ecsDemo
 利用actor模型，基于ecs，实现的分布式地图，完成实体基础行为：移动、战斗
 
-###Run(go version ≥ 1.17)
+# Run(go version ≥ 1.17)
 ```sh
 $ go run github.com/wwj31/ecsDemo@v1.0.1
 ```
