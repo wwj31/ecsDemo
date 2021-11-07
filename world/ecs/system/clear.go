@@ -2,8 +2,8 @@ package system
 
 import (
 	"github.com/wwj31/dogactor/ecs"
-	"ecsDemo/world/ecs/component"
-	"ecsDemo/world/interfaces"
+	"github.com/wwj31/ecsDemo/world/ecs/component"
+	"github.com/wwj31/ecsDemo/world/interfaces"
 )
 
 // 实体输入系统

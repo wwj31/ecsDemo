@@ -1,9 +1,9 @@
 package msgtools
 
 import (
-	"ecsDemo/internal/inner_message/inner"
-	"ecsDemo/internal/message"
 	"github.com/wwj31/dogactor/tools"
+	"github.com/wwj31/ecsDemo/internal/inner_message/inner"
+	"github.com/wwj31/ecsDemo/internal/message"
 )
 
 func Vec3f2Inner(v tools.Vec3f) *inner.Vec3F {

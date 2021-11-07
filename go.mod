@@ -1,4 +1,4 @@
-module ecsDemo
+module github.com/wwj31/ecsDemo
 
 go 1.17
 

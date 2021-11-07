@@ -4,8 +4,8 @@ import (
 	"github.com/wwj31/dogactor/expect"
 	"github.com/wwj31/dogactor/log"
 	"github.com/wwj31/dogactor/tools"
-	"ecsDemo/world/ecs/component"
-	"ecsDemo/world/interfaces"
+	"github.com/wwj31/ecsDemo/world/ecs/component"
+	"github.com/wwj31/ecsDemo/world/interfaces"
 )
 
 const (

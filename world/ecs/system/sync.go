@@ -1,14 +1,14 @@
 package system
 
 import (
-	"ecsDemo/internal/common"
-	"ecsDemo/internal/inner_message"
-	"ecsDemo/internal/message"
 	"github.com/wwj31/dogactor/ecs"
 	"github.com/wwj31/dogactor/log"
-	"ecsDemo/world/ecs/component"
-	"ecsDemo/world/interfaces"
-	"ecsDemo/world/utils"
+	"github.com/wwj31/ecsDemo/internal/common"
+	"github.com/wwj31/ecsDemo/internal/inner_message"
+	"github.com/wwj31/ecsDemo/internal/message"
+	"github.com/wwj31/ecsDemo/world/ecs/component"
+	"github.com/wwj31/ecsDemo/world/interfaces"
+	"github.com/wwj31/ecsDemo/world/utils"
 )
 
 //

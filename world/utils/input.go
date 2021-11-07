@@ -1,8 +1,8 @@
 package utils
 
 import (
-	"ecsDemo/world/ecs/component"
-	"ecsDemo/world/interfaces"
+	"github.com/wwj31/ecsDemo/world/ecs/component"
+	"github.com/wwj31/ecsDemo/world/interfaces"
 )
 
 // 拿不到就创建

@@ -1,12 +1,12 @@
 package component
 
 import (
-	"ecsDemo/internal/message"
-	"ecsDemo/internal/msgtools"
 	"github.com/golang/protobuf/proto"
 	"github.com/wwj31/dogactor/ecs"
 	"github.com/wwj31/dogactor/expect"
 	"github.com/wwj31/dogactor/tools"
+	"github.com/wwj31/ecsDemo/internal/message"
+	"github.com/wwj31/ecsDemo/internal/msgtools"
 )
 
 type Option func(*Move)

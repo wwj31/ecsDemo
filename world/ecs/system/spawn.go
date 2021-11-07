@@ -1,12 +1,12 @@
 package system
 
 import (
-	"ecsDemo/internal/common"
-	"ecsDemo/internal/inner_message/inner"
 	"github.com/wwj31/dogactor/ecs"
 	"github.com/wwj31/dogactor/log"
-	"ecsDemo/world/ecs/component"
-	"ecsDemo/world/interfaces"
+	"github.com/wwj31/ecsDemo/internal/common"
+	"github.com/wwj31/ecsDemo/internal/inner_message/inner"
+	"github.com/wwj31/ecsDemo/world/ecs/component"
+	"github.com/wwj31/ecsDemo/world/interfaces"
 )
 
 // 创建实体系统

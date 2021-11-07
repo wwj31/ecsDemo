@@ -2,7 +2,7 @@ package utils
 
 import (
 	"github.com/wwj31/dogactor/tools"
-	"ecsDemo/world/ecs/component"
+	"github.com/wwj31/ecsDemo/world/ecs/component"
 )
 
 func InBound(bound component.Bound, f tools.Vec3f) bool {

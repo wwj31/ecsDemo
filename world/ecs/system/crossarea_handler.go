@@ -1,14 +1,14 @@
 package system
 
 import (
-	"ecsDemo/internal/inner_message/inner"
 	"github.com/wwj31/dogactor/ecs"
 	"github.com/wwj31/dogactor/expect"
 	"github.com/wwj31/dogactor/fsm"
 	"github.com/wwj31/dogactor/log"
 	"github.com/vmihailenco/msgpack"
-	"ecsDemo/world/ecs/component"
-	"ecsDemo/world/utils"
+	"github.com/wwj31/ecsDemo/internal/inner_message/inner"
+	"github.com/wwj31/ecsDemo/world/ecs/component"
+	"github.com/wwj31/ecsDemo/world/utils"
 )
 
 // 添加邻服实体副本

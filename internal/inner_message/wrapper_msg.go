@@ -1,10 +1,10 @@
 package inner_message
 
 import (
-	"ecsDemo/internal/inner_message/inner"
 	"github.com/wwj31/dogactor/log"
 	"github.com/wwj31/dogactor/tools"
 	"github.com/golang/protobuf/proto"
+	"github.com/wwj31/ecsDemo/internal/inner_message/inner"
 	"google.golang.org/protobuf/reflect/protoreflect"
 	"google.golang.org/protobuf/reflect/protoregistry"
 )

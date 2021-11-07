@@ -1,14 +1,6 @@
 package world
 
 import (
-	"ecsDemo/internal/common"
-	"ecsDemo/internal/inner_message"
-	"ecsDemo/internal/inner_message/inner"
-	"ecsDemo/internal/message"
-	"ecsDemo/world/constant"
-	"ecsDemo/world/ecs/component"
-	"ecsDemo/world/ecs/system"
-	"ecsDemo/world/interfaces"
 	"github.com/golang/protobuf/proto"
 	"github.com/wwj31/dogactor/actor"
 	"github.com/wwj31/dogactor/ecs"
@@ -16,6 +8,14 @@ import (
 	"github.com/wwj31/dogactor/log"
 	"github.com/wwj31/dogactor/log/colorized"
 	"github.com/wwj31/dogactor/tools"
+	"github.com/wwj31/ecsDemo/internal/common"
+	"github.com/wwj31/ecsDemo/internal/inner_message"
+	"github.com/wwj31/ecsDemo/internal/inner_message/inner"
+	"github.com/wwj31/ecsDemo/internal/message"
+	"github.com/wwj31/ecsDemo/world/constant"
+	"github.com/wwj31/ecsDemo/world/ecs/component"
+	"github.com/wwj31/ecsDemo/world/ecs/system"
+	"github.com/wwj31/ecsDemo/world/interfaces"
 	"time"
 )
 

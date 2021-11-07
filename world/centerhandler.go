@@ -1,14 +1,14 @@
 package world
 
 import (
-	"ecsDemo/internal/common"
-	"ecsDemo/internal/inner_message"
-	"ecsDemo/internal/inner_message/inner"
-	"ecsDemo/internal/message"
 	"github.com/wwj31/dogactor/expect"
 	"github.com/wwj31/dogactor/log"
 	"github.com/wwj31/dogactor/tools"
-	"ecsDemo/world/utils"
+	"github.com/wwj31/ecsDemo/internal/common"
+	"github.com/wwj31/ecsDemo/internal/inner_message"
+	"github.com/wwj31/ecsDemo/internal/inner_message/inner"
+	"github.com/wwj31/ecsDemo/internal/message"
+	"github.com/wwj31/ecsDemo/world/utils"
 )
 
 // world 通知center 实体切换区域

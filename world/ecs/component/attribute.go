@@ -1,11 +1,11 @@
 package component
 
 import (
-	"ecsDemo/internal/inner_message/inner"
-	"ecsDemo/internal/message"
 	"github.com/wwj31/dogactor/ecs"
 	"github.com/wwj31/dogactor/expect"
 	"github.com/golang/protobuf/proto"
+	"github.com/wwj31/ecsDemo/internal/inner_message/inner"
+	"github.com/wwj31/ecsDemo/internal/message"
 	"math/rand"
 
 )

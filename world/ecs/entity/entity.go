@@ -1,14 +1,14 @@
 package entity
 
 import (
-	"ecsDemo/internal/inner_message/inner"
-	"ecsDemo/internal/message"
-	"ecsDemo/world/ecs/component"
-	"ecsDemo/world/interfaces"
 	"github.com/vmihailenco/msgpack"
 	"github.com/wwj31/dogactor/ecs"
 	"github.com/wwj31/dogactor/expect"
 	"github.com/wwj31/dogactor/log"
+	"github.com/wwj31/ecsDemo/internal/inner_message/inner"
+	"github.com/wwj31/ecsDemo/internal/message"
+	"github.com/wwj31/ecsDemo/world/ecs/component"
+	"github.com/wwj31/ecsDemo/world/interfaces"
 )
 
 // 副本数据

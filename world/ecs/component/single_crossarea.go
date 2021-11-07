@@ -1,8 +1,8 @@
 package component
 
 import (
-	"ecsDemo/world/constant"
 	"github.com/wwj31/dogactor/ecs"
+	"github.com/wwj31/ecsDemo/world/constant"
 )
 
 /*

@@ -1,6 +1,6 @@
 package interfaces
 
-import "ecsDemo/internal/message"
+import "github.com/wwj31/ecsDemo/internal/message"
 
 type IMsgComponent interface {
 	SyncData() *message.SyncData

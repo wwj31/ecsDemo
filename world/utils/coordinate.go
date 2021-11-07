@@ -3,7 +3,7 @@ package utils
 import (
 	"github.com/wwj31/dogactor/log"
 	"github.com/wwj31/dogactor/tools"
-	"ecsDemo/world/constant"
+	"github.com/wwj31/ecsDemo/world/constant"
 )
 
 // 传入位置，得到所在区域

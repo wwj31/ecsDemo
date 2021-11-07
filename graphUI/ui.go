@@ -1,16 +1,18 @@
 package graphUI
 
 import (
-	"ecsDemo/internal/common"
-	"ecsDemo/internal/inner_message/inner"
-	"ecsDemo/world/constant"
 	"fmt"
-	"github.com/gonutz/prototype/draw"
-	"github.com/wwj31/dogactor/log"
-	"github.com/wwj31/dogactor/tools"
 	"math"
 	"os"
 	"time"
+
+	"github.com/gonutz/prototype/draw"
+	"github.com/wwj31/dogactor/log"
+	"github.com/wwj31/dogactor/tools"
+	"github.com/wwj31/ecsDemo/internal/common"
+	"github.com/wwj31/ecsDemo/internal/inner_message/inner"
+	"github.com/wwj31/ecsDemo/world/constant"
+
 )
 
 var uiActor *GraphUI

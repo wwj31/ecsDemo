@@ -1,9 +1,9 @@
 package component
 
 import (
-	"ecsDemo/internal/inner_message/inner"
 	"github.com/wwj31/dogactor/ecs"
 	"github.com/wwj31/dogactor/fsm"
+	"github.com/wwj31/ecsDemo/internal/inner_message/inner"
 )
 
 type (

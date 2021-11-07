@@ -1,18 +1,20 @@
 package graphUI
 
 import (
-	"ecsDemo/internal/common"
-	"ecsDemo/internal/inner_message/inner"
-	"ecsDemo/world/constant"
 	"fmt"
-	"github.com/wwj31/dogactor/actor"
-	"github.com/wwj31/dogactor/iniconfig"
-	"github.com/wwj31/dogactor/tools"
 	"math/rand"
 	"strconv"
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/wwj31/dogactor/actor"
+	"github.com/wwj31/dogactor/iniconfig"
+	"github.com/wwj31/dogactor/tools"
+	"github.com/wwj31/ecsDemo/internal/common"
+	"github.com/wwj31/ecsDemo/internal/inner_message/inner"
+	"github.com/wwj31/ecsDemo/world/constant"
+
 )
 
 type (

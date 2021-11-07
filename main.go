@@ -1,16 +1,18 @@
 package main
 
 import (
-	"ecsDemo/graphUI"
-	"ecsDemo/world"
-	"github.com/wwj31/dogactor/actor"
-	"github.com/wwj31/dogactor/actor/cmd"
-	"github.com/wwj31/dogactor/expect"
-	"github.com/wwj31/dogactor/log"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
+
+	"github.com/wwj31/dogactor/actor"
+	"github.com/wwj31/dogactor/actor/cmd"
+	"github.com/wwj31/dogactor/expect"
+	"github.com/wwj31/dogactor/log"
+	"github.com/wwj31/ecsDemo/graphUI"
+	"github.com/wwj31/ecsDemo/world"
+
 )
 var (
 	ETCD_ADDR   = "127.0.0.1:2379"

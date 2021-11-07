@@ -1,19 +1,19 @@
 package system
 
 import (
-	"ecsDemo/internal/common"
-	"ecsDemo/internal/inner_message/inner"
-	"ecsDemo/internal/message"
 	"github.com/wwj31/dogactor/ecs"
 	"github.com/wwj31/dogactor/expect"
 	"github.com/wwj31/dogactor/fsm"
 	"github.com/wwj31/dogactor/log"
 	"github.com/wwj31/dogactor/tools"
-	"ecsDemo/world/constant"
-	"ecsDemo/world/ecs/component"
-	"ecsDemo/world/ecs/entity"
-	"ecsDemo/world/interfaces"
-	"ecsDemo/world/utils"
+	"github.com/wwj31/ecsDemo/internal/common"
+	"github.com/wwj31/ecsDemo/internal/inner_message/inner"
+	"github.com/wwj31/ecsDemo/internal/message"
+	"github.com/wwj31/ecsDemo/world/constant"
+	"github.com/wwj31/ecsDemo/world/ecs/component"
+	"github.com/wwj31/ecsDemo/world/ecs/entity"
+	"github.com/wwj31/ecsDemo/world/interfaces"
+	"github.com/wwj31/ecsDemo/world/utils"
 )
 
 const TURN = 1
